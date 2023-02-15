@@ -1,6 +1,5 @@
 <template>
   <MerFunktioner @emitvaluex="customeventfunktion" propvalue="hej" />
-  <p>testar</p>
 </template>
 
 <script>
