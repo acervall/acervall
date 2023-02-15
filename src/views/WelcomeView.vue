@@ -3,7 +3,7 @@
     height: 100vh;
     width: 100vw;
     position: relative;
-    background-color: #181818;
+
     display: flex;
     overflow: hidden;
   }
@@ -14,6 +14,7 @@
     height: 100vh;
     width: 100vw;
     position: fixed;
+    z-index: -2;
   }
   #content {
     display: flex;
@@ -37,7 +38,7 @@
     position: fixed;
     top: 0;
     opacity: 0.1;
-    z-index: 0;
+    z-index: 1;
   }
 
   #selectedavatar {
