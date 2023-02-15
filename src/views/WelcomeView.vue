@@ -1,6 +1,7 @@
 <style scoped lang="scss">
   #backgroundImg {
     height: 100vh;
+    width: 100vw;
     position: relative;
     background-color: #181818;
     display: flex;
@@ -8,41 +9,61 @@
   }
   #backgroundImg:after {
     content: '';
-    background: url(../../assets/img/portrait1.jpg);
+    background: url(../../assets/img/portrait6.jpg);
     background-size: cover;
     height: 100vh;
+    width: 100vw;
     position: fixed;
-    opacity: 0.2;
   }
   #content {
     display: flex;
     flex-direction: column;
     align-items: center;
     align-self: center;
+    position: absolute;
+    bottom: 0;
     #NewProfile {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
+
+  #content:after {
+    content: '';
+    background: url(../../assets/img/portrait6.jpg);
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    opacity: 0.1;
+    z-index: 0;
+  }
+
+  #selectedavatar {
+    width: 11vh;
+    height: 11vh;
+  }
 </style>
 
 <template>
   <div id="backgroundImg">
-    <div id="content" class="popupoverlay">
-      <img class="avatarimg" :src="avatar" />
+    <div id="content" class="popupoverlay p-3">
+      <img class="avatarimg m-4" :src="avatar" id="selectedavatar" />
 
-      <form>
+      <form class="navbar bar">
         <input
-          class="bar"
           type="text"
+          class="selected"
           v-model="newUsername"
           placeholder="Name"
         />
       </form>
-      <p>Choose your avatar</p>
-      <div id="NewProfile">
+      <div id="NewProfile" class="m-3">
         <ChangeAvatar />
-        <NewProfile :newUser="newUsername" />
+        <div class="mt-5 p-2">
+          <NewProfile :newUser="newUsername" />
+        </div>
       </div>
     </div>
   </div>

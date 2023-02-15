@@ -1,7 +1,13 @@
-<style></style>
-
 <template>
-  <RouterLink @click="submitUsername()" to="/home">Continue</RouterLink>
+  <div class="p-3 fixed-bottom mb-4">
+    <nav class="navbar bar largebtn">
+      <button type="button" class="selected">
+        <RouterLink @click="submitUsername()" to="/home" class="textbtn"
+          >Continue</RouterLink
+        >
+      </button>
+    </nav>
+  </div>
 </template>
 
 <script>

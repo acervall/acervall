@@ -2,7 +2,15 @@ import { createStore } from 'vuex'
 
 const mutations = {
   saveToken(state, result) {
+    console.log('saveToken from store')
     state.token = result
+    localStorage.setItem('token', result)
+  },
+  resetToken(state) {
+    console.log('resetToken from store')
+    state.token = null
+    localStorage.removeItem('token')
+    //this.$router.push('/home')
   },
   clearDeparture(state) {
     state.Departure = []
@@ -37,7 +45,7 @@ const mutations = {
 }
 
 const state = {
-  token: null,
+  token: localStorage.getItem('token'),
   LocationList: null,
   StopLocation: [],
   DepartureBoard: null,

@@ -33,6 +33,7 @@
 
     methods: {
       getToken() {
+        console.log('get token')
         axios({
           method: 'post',
           url: 'https://api.vasttrafik.se/token',
@@ -44,12 +45,25 @@
           }
         }).then((response) => {
           const result = response.data.access_token
-          this.$store.commit('saveToken', result)
+          //this.$store.commit('saveToken', result)
+          this.setToken(result)
         })
       },
 
+      setToken(result) {
+        console.log('commit token from find stop, starting timer')
+        this.$store.commit('saveToken', result)
+        setTimeout(() => {
+          console.log('resetToken from Findstop timeout')
+          //this.$store.commit('resetToken')
+          this.getToken()
+          this.$router.push('/home')
+        }, 3600000)
+        /* 3600000 */
+      },
+
       findStop() {
-        if (this.search.length === 3) {
+        if (this.search.length > 2) {
           const search = this.search
           let searchResult = this.searchResult
           axios({

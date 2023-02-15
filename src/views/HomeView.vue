@@ -38,6 +38,7 @@
     },
     methods: {
       handleSelect(id) {
+        console.log(this.handleSelect, 'handle select emit')
         this.$refs.stopSelector.selectStop(id)
       }
     }

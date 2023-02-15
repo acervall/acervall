@@ -7,8 +7,9 @@ import store from './store'
 import '../assets/scss/custom.scss'
 import '../assets/scss/main.scss'
 
-import { library } from '../node_modules/@fortawesome/fontawesome-svg-core'
-import { faHatWizard } from '../node_modules/@fortawesome/free-solid-svg-icons'
+import { library } from '@fortawesome/fontawesome-svg-core'
+
+import { faHatWizard } from '@fortawesome/free-solid-svg-icons'
 
 library.add(faHatWizard)
 

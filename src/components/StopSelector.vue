@@ -10,7 +10,7 @@
           @click="selectStop(stop.id)"
           class="list-group-item"
         >
-          <RouterLink to="/departures" class="list-group-item-action link">
+          <RouterLink to="/departures/:id" class="list-group-item-action link">
             {{ stop.name }}
           </RouterLink>
         </li>
