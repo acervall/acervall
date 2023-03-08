@@ -33,15 +33,10 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
-
   export default {
     name: 'WelcomeComp',
     created() {
       this.try()
-    },
-    computed: {
-      /*  ...mapState(['avatar']) */
     },
     data() {
       return {

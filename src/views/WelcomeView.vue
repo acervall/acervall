@@ -63,7 +63,7 @@
       <div id="NewProfile" class="m-3">
         <ChangeAvatar />
         <div class="mt-5 p-2">
-          <NewProfile :newUser="newUsername" />
+          <NewProfile :new-user="newUsername" />
         </div>
       </div>
     </div>

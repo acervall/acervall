@@ -93,7 +93,7 @@
 
 <template>
   <template v-if="this.$store.state.Departure != null">
-    <div id="background"></div>
+    <div id="background" />
 
     <div id="placeholder">
       <svg
@@ -111,14 +111,14 @@
         id="arrowbtn"
         class="selected m-3 arrowicon"
         @click="backHome()"
-      ></button>
+      />
     </div>
     <!-- class="popupoverlay" -->
     <div class="content">
       <div class="d-flex justify-content-around mb-2" id="depfil">
         <button class="selected active">
           Departures
-          <div id="line"></div>
+          <div id="line" />
         </button>
         <button class="selected">Filter</button>
       </div>
@@ -220,7 +220,6 @@
         })
           .then((response) => {
             this.departuresResult = response.data
-            const stop = this.departuresResult.DepartureBoard.Departure[0].stop
             this.$store.commit('searchDepartures', this.departuresResult)
             this.$router.push(`/departures/${id}`)
           })

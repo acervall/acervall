@@ -48,9 +48,9 @@
         })
           .then((response) => {
             this.departuresResult = response.data
-            const stop = this.departuresResult.DepartureBoard.Departure[0].stop
             this.$store.commit('searchDepartures', this.departuresResult)
             this.$router.push(`/departures/${id}`)
+            console.log('här', this.departuresResult)
           })
           .catch((error) => {
             console.log(error)
@@ -62,14 +62,6 @@
 </script>
 
 <!--
-
-props: {
-  Departure: Array
-}
-
-props: {
-  name: String,
-  sname: Number,
   journeyNumber: Number,
   type: String,
   stopid: Number,

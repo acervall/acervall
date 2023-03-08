@@ -56,12 +56,7 @@
 </template>
 
 <script>
-  //  import { FontAwesomeIcon } from '../node_modules/@fortawesome/vue-fontawesome'
-  import { faFontAwesome } from '../../node_modules/@fortawesome/free-solid-svg-icons'
   export default {
-    name: 'NavBar',
-    components: {
-      faFontAwesome
-    }
+    name: 'NavBar'
   }
 </script>

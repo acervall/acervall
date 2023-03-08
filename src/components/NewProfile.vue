@@ -34,7 +34,10 @@
     emits: ['usernameSubmitted'],
 
     props: {
-      newUser: String
+      newUser: {
+        type: String,
+        default: ''
+      }
     },
 
     methods: {

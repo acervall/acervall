@@ -29,8 +29,6 @@
       }
     },
 
-    props: ['Departure'],
-
     methods: {
       getToken() {
         console.log('get token')
@@ -65,7 +63,6 @@
       findStop() {
         if (this.search.length > 2) {
           const search = this.search
-          let searchResult = this.searchResult
           axios({
             method: 'get',
             url: `https://api.vasttrafik.se/bin/rest.exe/v2/location.name?input=${search}&format=json`,

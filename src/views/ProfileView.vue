@@ -1,10 +1,10 @@
 <template>
   <div class="phoneContent">
     <template v-if="existingUser">
-      <ProfilePage @usernameSubmitted="existingUser = false" />
+      <ProfilePage @username-submitted="existingUser = false" />
     </template>
     <template v-else>
-      <NewProfile @usernameSubmitted="existingUser = true" />
+      <NewProfile @username-submitted="existingUser = true" />
     </template>
     <NavBar />
   </div>
